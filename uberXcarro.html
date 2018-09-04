@@ -3,11 +3,18 @@
 <h2>Comparativo Carro e Uber</h2>
 
 <h3>Uber</h3>
-Total: R$27,38
-
+<script>
+    var distancia = parseFloat(prompt("Digite a distância a percorrer em km"));
+    var velocidadeMedia = 40;
+    var tempoEmHoras = distancia/velocidadeMedia;
+    var tempoEmMinutos = tempoEmHoras*60;
+    var precoTotalUber = 2 + 1.4*distancia + 0.26*tempoEmMinutos;
+    document.write(`
+        Total: R$ ${precoTotalUber.toFixed(2).replace(".",",")}
+    `);
+</script>
 <h3>Carro</h3>
 <script> 
-    var distancia = parseFloat(prompt("Digite a distância a percorrer em km"));
     var autonomia = parseFloat(prompt("Digite a autonomia do seu carro em km/l"));
     var precoLitroCombustivel = parseFloat(prompt("Digite o preço por litro do combustível (no posto)"));
     
