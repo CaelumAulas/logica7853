@@ -16,9 +16,11 @@ Total: R$27,38
     
     var precoTotalCarro = precoTrajetoCombustivel+precoEstacionamento;
 
-    document.write("Preço TrajetoGasolina: R$" + precoTrajetoCombustivel.toFixed(2).replace(".",","));
-    document.write("<br>");
-    document.write("Preço Estacionamento: R$"+precoEstacionamento.toFixed(2).replace(".",","));
-    document.write("<br>");
-    document.write("Total: R$"+precoTotalCarro.toFixed(2).replace(".",","));
+    document.write(`
+        Preço Combustível no trajeto: R$ ${precoTrajetoCombustivel.toFixed(2).replace(".",",")}
+        <br>
+        Preço Estacionamento: R$ ${precoEstacionamento.toFixed(2).replace(".",",")}
+        <br>
+        Total: R$ ${precoTotalCarro.toFixed(2).replace(".",",")}
+    `);
 </script>
