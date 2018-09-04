@@ -4,7 +4,13 @@
 
 <h3>Uber</h3>
 <script>
-    var distancia = parseFloat(prompt("Digite a distância a percorrer em km"));
+    var texto;
+    function pegaNumeroDoUsuario() {
+        return parseFloat(prompt(texto).replace(",","."));
+    }
+
+    texto = "Digite a distância a percorrer em km";
+    var distancia = pegaNumeroDoUsuario();
     var velocidadeMedia = 40;
     var tempoEmHoras = distancia/velocidadeMedia;
     var tempoEmMinutos = tempoEmHoras*60;
@@ -15,11 +21,14 @@
 </script>
 <h3>Carro</h3>
 <script> 
-    var autonomia = parseFloat(prompt("Digite a autonomia do seu carro em km/l"));
-    var precoLitroCombustivel = parseFloat(prompt("Digite o preço por litro do combustível (no posto)"));
+    texto = "Digite a autonomia do seu carro em km/l";
+    var autonomia = pegaNumeroDoUsuario();
+    texto = "Digite o preço do combustível em reais (no posto)";
+    var precoLitroCombustivel = pegaNumeroDoUsuario();
     
     var precoTrajetoCombustivel=distancia/autonomia*precoLitroCombustivel;
-    var precoEstacionamento= parseFloat(prompt("Digite o valor do estacionamento"));
+    texto = "Digite o valor do estacionamento";
+    var precoEstacionamento= pegaNumeroDoUsuario();
     
     var precoTotalCarro = precoTrajetoCombustivel+precoEstacionamento;
 
