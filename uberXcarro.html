@@ -15,9 +15,9 @@
     var tempoEmHoras = distancia/velocidadeMedia;
     var tempoEmMinutos = tempoEmHoras*60;
     var precoTotalUber = 2 + 1.4*distancia + 0.26*tempoEmMinutos;
-    tempo = tempoEmMinutos;
+
     document.write(`
-        Tempo: ${formataRelogio()}
+        Tempo: ${formataRelogio(tempoEmMinutos)}
         <br>
         Total: R$ ${precoTotalUber.toFixed(2).replace(".",",")}
     `);
