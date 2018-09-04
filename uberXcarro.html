@@ -2,23 +2,23 @@
 
 <h2>Comparativo Carro e Uber</h2>
 
-<!-- <script>
-    var distancia = prompt("Digite a distância percorrida");
-</script> -->
-
 <h3>Uber</h3>
 Total: R$27,38
 
 <h3>Carro</h3>
-<script>
-    var precoGasolina=parseFloat(prompt("Digite o valor gasto com gasolina no trajeto"));
+<script> 
+    var distancia = parseFloat(prompt("Digite a distância a percorrer em km"));
+    var autonomia = parseFloat(prompt("Digite a autonomia do seu carro em km/l"));
+    var precoLitroCombustivel = parseFloat(prompt("Digite o preço por litro do combustível (no posto)"));
+    
+    var precoTrajetoCombustivel=distancia/autonomia*precoLitroCombustivel;
     var precoEstacionamento= parseFloat(prompt("Digite o valor do estacionamento"));
-    var precoTotalCarro = precoGasolina+precoEstacionamento;
+    
+    var precoTotalCarro = precoTrajetoCombustivel+precoEstacionamento;
 
-    document.write("Preço Gasolina: R$"+precoGasolina.toFixed(2).replace(".",","));
+    document.write("Preço TrajetoGasolina: R$" + precoTrajetoCombustivel.toFixed(2).replace(".",","));
     document.write("<br>");
     document.write("Preço Estacionamento: R$"+precoEstacionamento.toFixed(2).replace(".",","));
     document.write("<br>");
     document.write("Total: R$"+precoTotalCarro.toFixed(2).replace(".",","));
-
 </script>
