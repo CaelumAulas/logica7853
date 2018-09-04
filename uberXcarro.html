@@ -1,17 +1,24 @@
 <meta charset="utf-8">
 
 <h2>Comparativo Carro e Uber</h2>
-
-<h3>Uber</h3>
+<!-- função formataRelogio() -->
+<script src="http://192.168.0.29:8080/libTempo.js"></script>
 <script src="pegaNumero.js"></script>
 <script>
     texto = "Digite a distância a percorrer em km";
     var distancia = pegaNumeroDoUsuario();
+    document.write(`
+        Distância: ${distancia} km
+    `);
+    document.write("<h3>Uber</h3>");
     var velocidadeMedia = 40;
     var tempoEmHoras = distancia/velocidadeMedia;
     var tempoEmMinutos = tempoEmHoras*60;
     var precoTotalUber = 2 + 1.4*distancia + 0.26*tempoEmMinutos;
+    tempo = tempoEmMinutos;
     document.write(`
+        Tempo: ${formataRelogio()}
+        <br>
         Total: R$ ${precoTotalUber.toFixed(2).replace(".",",")}
     `);
 </script>
