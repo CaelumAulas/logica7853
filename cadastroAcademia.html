@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<h1>Cadastro Academia</h1>
+<script src="funcoes.js"></script>
+<script>
+    var nome = prompt("Digite seu nome");
+    var peso = pegaNumeroDoUsuario("Digite seu peso em kg");
+    var altura = pegaNumeroDoUsuario("Digite sua altura em m");
+    var dataNascimento = prompt("Digite sua data de nascimento (dd/mm/aaaa)");
+
+    document.write(`
+    Nome: ${nome}
+    <br>
+    Peso: ${peso.toFixed(2).replace(".",",")}kg
+    <br>
+    Altura: ${altura.toFixed(2).replace(".",",")}m
+    <br>
+    Data de Nascimento: ${dataNascimento}
+    `);
+</script>
