@@ -18,7 +18,7 @@
     document.write(`
         Tempo: ${formataRelogio(tempoEmMinutos)}
         <br>
-        Total: R$ ${precoTotalUber.toFixed(2).replace(".",",")}
+        Total: ${formataPreco(precoTotalUber)}
     `);
 </script>
 <h3>Carro</h3>
@@ -32,10 +32,10 @@
     var precoTotalCarro = precoTrajetoCombustivel+precoEstacionamento;
 
     document.write(`
-        Preço Combustível no trajeto: R$ ${precoTrajetoCombustivel.toFixed(2).replace(".",",")}
+        Preço Combustível no trajeto: ${formataPreco(precoTrajetoCombustivel)}
         <br>
-        Preço Estacionamento: R$ ${precoEstacionamento.toFixed(2).replace(".",",")}
+        Preço Estacionamento: ${formataPreco(precoEstacionamento)}
         <br>
-        Total: R$ ${precoTotalCarro.toFixed(2).replace(".",",")}
+        Total: ${formataPreco(precoTotalCarro)}
     `);
 </script>
