@@ -1,4 +1,4 @@
-var texto;
-function pegaNumeroDoUsuario() {
+
+function pegaNumeroDoUsuario(texto) {
     return parseFloat(prompt(texto).replace(",","."));
 }

@@ -5,8 +5,7 @@
 <script src="https://bit.ly/2LZ5sz0"></script>
 <script src="pegaNumero.js"></script>
 <script>
-    texto = "Digite a distância a percorrer em km";
-    var distancia = pegaNumeroDoUsuario();
+    var distancia = pegaNumeroDoUsuario("Digite a distância a percorrer em km");
     document.write(`
         Distância: ${distancia} km
     `);
@@ -24,14 +23,11 @@
 </script>
 <h3>Carro</h3>
 <script> 
-    texto = "Digite a autonomia do seu carro em km/l";
-    var autonomia = pegaNumeroDoUsuario();
-    texto = "Digite o preço do combustível em reais (no posto)";
-    var precoLitroCombustivel = pegaNumeroDoUsuario();
+    var autonomia = pegaNumeroDoUsuario("Digite a autonomia do seu carro em km/l");
+    var precoLitroCombustivel = pegaNumeroDoUsuario("Digite o preço do combustível em reais (no posto)");
     
     var precoTrajetoCombustivel=distancia/autonomia*precoLitroCombustivel;
-    texto = "Digite o valor do estacionamento";
-    var precoEstacionamento= pegaNumeroDoUsuario();
+    var precoEstacionamento= pegaNumeroDoUsuario("Digite o valor do estacionamento");
     
     var precoTotalCarro = precoTrajetoCombustivel+precoEstacionamento;
 

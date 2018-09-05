@@ -4,10 +4,8 @@
 <!-- funcao pegaNumeroDoUsuario() -->
 <script src="pegaNumero.js"></script>
 <script>
-    texto = "Digite o seu peso (kg)";
-    var peso =pegaNumeroDoUsuario();
-    texto = "Digite sua altura (m)";
-    var altura = pegaNumeroDoUsuario();
+    var peso =pegaNumeroDoUsuario("Digite o seu peso (kg)");
+    var altura = pegaNumeroDoUsuario("Digite sua altura (m)");
     var imc = peso/Math.pow(altura,2);
 
     document.write("O seu IMC é "+imc.toFixed(2).replace(".",","));
