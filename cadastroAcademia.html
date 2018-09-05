@@ -2,11 +2,19 @@
 
 <h1>Cadastro Academia</h1>
 <script src="funcoes.js"></script>
+<script src="https://bit.ly/2Ngt8nn"></script>
 <script>
     var nome = prompt("Digite seu nome");
     var peso = pegaNumeroDoUsuario("Digite seu peso em kg");
     var altura = pegaNumeroDoUsuario("Digite sua altura em m");
     var dataNascimento = prompt("Digite sua data de nascimento (dd/mm/aaaa)");
+    
+    var dataNascimentoSeparada = dataNascimento.split("/");
+    var diaNascimento = parseInt(dataNascimentoSeparada[0]);
+    var mesNascimento = parseInt(dataNascimentoSeparada[1]);
+    var anoNascimento = parseInt(dataNascimentoSeparada[2]);
+
+    var idade = calculaIdade(diaNascimento,mesNascimento,anoNascimento);
 
     document.write(`
     Nome: ${nome}
@@ -16,5 +24,7 @@
     Altura: ${altura.toFixed(2).replace(".",",")}m
     <br>
     Data de Nascimento: ${dataNascimento}
+    <br>
+    Idade: ${idade} anos
     `);
 </script>
