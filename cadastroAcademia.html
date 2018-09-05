@@ -10,6 +10,7 @@ Nome: <input type="text" id="campoNome"> <br>
 Peso: <input type="text" id="campoPeso"> <br>
 Altura: <input type="text" id="campoAltura"> <br>
 Data de Nascimento: <input type="text" id="campoData"><br>
+<input type="checkbox" id="campoProblemaSaude"> Tem problemas de saúde<br><br>
 <button onclick="cadastro()">Cadastrar</button>
 
 <script>
@@ -18,7 +19,7 @@ Data de Nascimento: <input type="text" id="campoData"><br>
         var peso = parseFloatBrasil(campoPeso.value);
         var altura = parseFloatBrasil(campoAltura.value);
         var dataNascimento = campoData.value;
-        var temProblemaDeSaude;
+        var temProblemaDeSaude = campoProblemaSaude.checked;
         
         campoNome.value="";
         campoPeso.value="";
@@ -32,6 +33,15 @@ Data de Nascimento: <input type="text" id="campoData"><br>
 
         var idade = calculaIdade(diaNascimento,mesNascimento,anoNascimento);
 
+        var fraseDeAcompanhamentoMedico;
+        //SE tem problema de saude
+        if (temProblemaDeSaude) {
+            fraseDeAcompanhamentoMedico = "Precisa de acompanhamento médico";
+        }
+        //SE NÃO tem problema de saúde
+        if (!temProblemaDeSaude) {
+            fraseDeAcompanhamentoMedico = "Não precisa de acompanhamento médico";
+        }
         mostra(`
         Nome: ${nome}
         <br>
@@ -42,6 +52,8 @@ Data de Nascimento: <input type="text" id="campoData"><br>
         Data de Nascimento: ${dataNascimento}
         <br>
         Idade: ${idade} anos
+        <br>
+        ${fraseDeAcompanhamentoMedico}
         `);
     }
 </script>
