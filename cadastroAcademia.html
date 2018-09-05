@@ -2,6 +2,7 @@
 <script src="funcoes.js"></script>
 <script src="https://bit.ly/2wIJYkD"></script>
 <script src="https://bit.ly/2Ngt8nn"></script>
+<script src="https://bit.ly/2Q2v0P4"></script>
 
 <h1>Cadastro Academia</h1>
 
@@ -17,7 +18,13 @@ Data de Nascimento: <input type="text" id="campoData"><br>
         var peso = parseFloatBrasil(campoPeso.value);
         var altura = parseFloatBrasil(campoAltura.value);
         var dataNascimento = campoData.value;
+        var temProblemaDeSaude;
         
+        campoNome.value="";
+        campoPeso.value="";
+        campoAltura.value="";
+        campoData.value="";
+
         var dataNascimentoSeparada = dataNascimento.split("/");
         var diaNascimento = parseInt(dataNascimentoSeparada[0]);
         var mesNascimento = parseInt(dataNascimentoSeparada[1]);
@@ -25,7 +32,7 @@ Data de Nascimento: <input type="text" id="campoData"><br>
 
         var idade = calculaIdade(diaNascimento,mesNascimento,anoNascimento);
 
-        document.write(`
+        mostra(`
         Nome: ${nome}
         <br>
         Peso: ${formataFloatBrasil(peso)}kg
