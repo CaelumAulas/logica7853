@@ -14,6 +14,7 @@ Data de Nascimento: <input type="text" id="campoData"><br>
 <button onclick="cadastro()">Cadastrar</button>
 
 <script>
+    var numero = 0;
     function cadastro() {
         var nome = campoNome.value;
         var peso = parseFloatBrasil(campoPeso.value);
@@ -21,6 +22,8 @@ Data de Nascimento: <input type="text" id="campoData"><br>
         var dataNascimento = campoData.value;
         var temProblemaDeSaude = campoProblemaSaude.checked;
         
+        numero=numero+1;
+
         campoNome.value="";
         campoPeso.value="";
         campoAltura.value="";
@@ -43,7 +46,13 @@ Data de Nascimento: <input type="text" id="campoData"><br>
         if (!temProblemaDeSaude) {
             fraseDeAcompanhamentoMedico = "Não precisa de acompanhamento médico";
         }
+        //SE numero IGUAL a 1
+        if (numero == 1) {
+            mostra(`<h3>Fichas:</h3>`);
+        }
         mostra(`
+        Número de cadastro: ${numero}
+        <br>
         Nome: ${nome}
         <br>
         Peso: ${formataFloatBrasil(peso)}kg
