@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script src="mostra.js"></script>
+
+<button onclick="jogar()">New Game</button>
+<script>
+    var numeroDoJogo = 0;
+    function jogar() {
+        var numeroEscondido = parseInt(prompt("Escolha um número"));
+        var numeroChute = parseInt(prompt("Adivinhe o número escolhido"));
+        var fraseDeAcerto;
+        //executa primeiro o 'numeroEscondido == numeroChute'
+        var acertou = numeroEscondido == numeroChute;
+        numeroDoJogo =  numeroDoJogo+1;
+        //SE acertou (iguais)
+        if (acertou) {
+            fraseDeAcerto = "Acertou!";
+        }
+        //SE NAO acertou (diferentes)
+        if (!acertou) {
+            fraseDeAcerto = "Errrrrrrrrrou!";
+        }
+        mostra(`
+                Jogo: ${numeroDoJogo}
+                <br>
+                ${fraseDeAcerto}
+                <br>
+                O número correto era ${numeroEscondido}
+        `);
+    }
+
+</script>
