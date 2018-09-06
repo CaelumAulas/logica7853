@@ -11,12 +11,10 @@
         //executa primeiro o 'numeroEscondido == numeroChute'
         var acertou = numeroEscondido == numeroChute;
         numeroDoJogo =  numeroDoJogo+1;
-        //SE acertou (iguais)
+        //SE acertou (iguais), guarda "Acertou!"; SENAO, guarda "Errrrrrrrrrou!"
         if (acertou) {
             fraseDeAcerto = "Acertou!";
-        }
-        //SE NAO acertou (diferentes)
-        if (!acertou) {
+        } else {
             fraseDeAcerto = "Errrrrrrrrrou!";
         }
         mostra(`
