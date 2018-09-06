@@ -3,13 +3,12 @@
 <h1>Copa do Mundo</h1>
 
 <script>
-    var anoDaCopa = 1930;
+    var anoDaCopa;
 
-    while (anoDaCopa <= 2018) {
+    for (anoDaCopa = 1930 ; anoDaCopa <= 2018 ; anoDaCopa = anoDaCopa+4){
         document.write(`
             ${anoDaCopa} - ${pegaPaisCopa(anoDaCopa)}
             <br>
         `);
-        anoDaCopa = anoDaCopa+4;
     }
 </script>
