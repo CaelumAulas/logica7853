@@ -9,14 +9,22 @@
         console.log(numeroEscondido);
         var numeroChute = parseInt(prompt("Adivinhe o número escolhido de 1 a 10"));
         var fraseDeAcerto;
+        var numeroDeValidacoes=0;
 
         //ENQUANTO numero inválido (numeroChute > 10 OU <= 0 OU é um NaN)
         while (numeroChute>10 || numeroChute<=0 || isNaN(numeroChute)) {
+            numeroDeValidacoes =   numeroDeValidacoes+1;
+            console.log("Validações "+numeroDeValidacoes);
+                
+            //SE numeroDeValidacoes chegar a 3, para de validar
+            if (numeroDeValidacoes >= 3) {
+                alert("Estourou o limite!!!!!!");
+                break; //saia do while
+            }
+
             alert("Seu número é inválido!");
             numeroChute = parseInt(prompt("Adivinhe o número escolhido de 1 a 10"));
         }
- 
-
 
         //executa primeiro o 'numeroEscondido == numeroChute'
         var acertou = numeroEscondido == numeroChute;
