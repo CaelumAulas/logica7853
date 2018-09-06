@@ -10,12 +10,12 @@
         var numeroChute = parseInt(prompt("Adivinhe o número escolhido de 1 a 10"));
         var fraseDeAcerto;
 
-        //ENQUANTO numero inválido (numeroChute > 10 OU <= 0)
-        while (numeroChute > 10 || numeroChute <= 0 ) {
+        //ENQUANTO numero inválido (numeroChute > 10 OU <= 0 OU é um NaN)
+        while (numeroChute>10 || numeroChute<=0 || isNaN(numeroChute)) {
             alert("Seu número é inválido!");
             numeroChute = parseInt(prompt("Adivinhe o número escolhido de 1 a 10"));
         }
-
+ 
 
 
         //executa primeiro o 'numeroEscondido == numeroChute'
