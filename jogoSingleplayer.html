@@ -10,8 +10,8 @@
         var numeroChute = parseInt(prompt("Adivinhe o número escolhido de 1 a 10"));
         var fraseDeAcerto;
 
-        //SE numero inválido (numeroChute > 10 OU <= 0)
-        if (numeroChute > 10 || numeroChute <= 0 ) {
+        //ENQUANTO numero inválido (numeroChute > 10 OU <= 0)
+        while (numeroChute > 10 || numeroChute <= 0 ) {
             alert("Seu número é inválido!");
             numeroChute = parseInt(prompt("Adivinhe o número escolhido de 1 a 10"));
         }
